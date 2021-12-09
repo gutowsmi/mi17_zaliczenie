@@ -29,6 +29,13 @@ class Company{
     public function GetCapital(){
         return $this->capital;
     }
+    public function __toString() {
+        return "Name:$this->name\nOwner: $this->owner\nCapital: $this->captial";
+    }
+    public function AddCapital($capital){
+        $holder = $this->capital + $capital
+        $this->capital = $holder
+    }
     
     
 }
