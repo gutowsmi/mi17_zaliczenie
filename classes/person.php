@@ -1,20 +1,20 @@
 <?php
 class Company{
     private String $name;
-    private String $owner;
+    private String $founder;
     private Int $capital;
     # constructor
-    function __construct($name,$owner,$capital){
+    function __construct($name,$founder,$capital){
         $this->name = $name;
-        $this->owner = $owner;
+        $this->founder = $founder;
         $this->capital = $capital;
     }
     # setters
     public function SetName($name){
         $this->name = $name;
     }
-    public function SetOwner($owner){
-        $this->owner = $owner;
+    public function SetFounder($founder){
+        $this->founder = $founder;
     }
     public function SetCaptial($ammount){
         $this->capital = $capital;
@@ -23,14 +23,14 @@ class Company{
     public function GetName(){
         return $this->name;
     }
-    public function GetOwner(){
-        return $this->owner;
+    public function GetFounder(){
+        return $this->founder;
     }
     public function GetCapital(){
         return $this->capital;
     }
     public function __toString() {
-        return "Name:$this->name\nOwner: $this->owner\nCapital: $this->captial";
+        return "Name:$this->name\nFounder: $this->founder\nCapital: $this->captial";
     }
     public function AddCapital($capital){
         $holder = $this->capital + $capital
