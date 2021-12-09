@@ -8,7 +8,7 @@
 </head>Klasy
 <body>
 <?php
-
+require_once("./classes/*")
 
 ?>
 </body>
