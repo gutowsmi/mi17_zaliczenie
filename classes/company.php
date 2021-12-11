@@ -1,8 +1,8 @@
 <?php
 class Company{
-    private String $name;
-    private String $founder;
-    private Int $capital;
+    protected String $name;
+    protected String $founder;
+    protected Int $capital;
     # constructor
     function __construct($name,$founder,$capital){
         $this->name = $name;
