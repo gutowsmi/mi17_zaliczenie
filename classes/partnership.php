@@ -16,7 +16,7 @@ class Partnership extends Personal{
         return "Name:$this->name\nFounder: $this->founder\nCapital: $this->captial\nHQ Location: $this->HQLocation\nThis company provides $this->profession services";
     }
     public function LookForWork(){
-        print("We are ardevtising our $this->profession services")
+        print("We are ardevtising our $this->profession services");
     }
 }
 ?>

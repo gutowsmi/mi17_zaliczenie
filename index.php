@@ -1,3 +1,9 @@
+<?php
+foreach (glob("classes/*.php") as $filename)
+{
+    require_once $filename;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,12 +13,25 @@
     <title>Klasy</title>
 </head>
 <body>
-<?php
-foreach (glob("classes/*.php") as $filename)
-{
-    require_once $filename;
-}
 
+<table>
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>imgSrc</th>
+        <th>title</th>
+        <th>level</th>
+        <th>parentId</th>
+    </tr>
+<?php
+$db = mysqli_connect("localhost","root","","zaliczenie");
+$query = "SELECT * FROM classes";
+$result = mysqli_query($db,$query);
+while($row = mysqli_fetch_array($result)){
+
+}
 ?>
+</table>
 </body>
 </html>
+

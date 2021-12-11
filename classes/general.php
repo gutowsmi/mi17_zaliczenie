@@ -14,7 +14,7 @@ class General extends Personal{
     }
     public function DaysTillDisable(){
         $now = date_create();
-        $diff = date_diff($now,$this->DateOfDisabling)/60/60/24
+        $diff = date_diff($now,$this->DateOfDisabling)/60/60/24;
         return "It is $diff days till disband of this company";
     }
     public function __toString() {
