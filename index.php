@@ -34,7 +34,8 @@ foreach (glob("classes/*.php") as $filename)
     $data = [];
     while($row = mysqli_fetch_array($result)){
         echo "<tr><td>$row[0]</td><td>$row[1]</td><td>$row[2]</td><td>$row[3]</td><td>$row[4]</td><td>$row[5]</td></tr>";
-        array_push($data,"<img src='img/placeholder.jpg' title='$row[3]' id='$counter'>");
+        $form = '"'."./forms/$row[1].php".'"';
+        array_push($data,"<img src='img/placeholder.jpg' title='$row[3]' id='$counter' onclick='document.location = $form'>");
         $counter++;
     }
     ?>
