@@ -1,0 +1,39 @@
+table{
+border-collapse: collapse;
+border: 2px gray solid;
+}
+th{
+    text-transform: capitalize;
+}
+tr{
+    border: 2px gray solid;
+}
+td,th{
+    border: 2px gray solid;
+    padding: 3px;
+}
+body{
+}
+#container{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+.holder{
+    align-self: center;
+    text-align: center;
+}
+#diagram-1{
+    width: 85vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+#diagram-2{
+
+    display: flex;
+    justify-content: space-around;
+
+}
+#diagram-3{
+    margin-right: 12vw;
+}
