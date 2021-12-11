@@ -3,8 +3,8 @@ require_once "capital.php";
 class Jsc extends Capital{
     private int $stockprice;
     private int $stocks;
-    function __construct($name,$founder,$capital,$StockExchange){
-        parent::__construct($name,$founder,$capital,$StockExchange,$stockprice,$stocks);
+    function __construct($name,$founder,$capital,$StockExchange,$stockprice,$stocks){
+        parent::__construct($name,$founder,$capital,$StockExchange);
         $this->stockprice = $stockprice;
         $this->stocks = $stocks;
     }
