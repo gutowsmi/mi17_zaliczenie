@@ -33,8 +33,8 @@ class Company{
         return "Name:$this->name\nFounder: $this->founder\nCapital: $this->captial";
     }
     public function AddCapital($capital){
-        $holder = $this->capital + $capital
-        $this->capital = $holder
+        $holder = $this->capital + $capital;
+        $this->capital = $holder;
     }
     
     
