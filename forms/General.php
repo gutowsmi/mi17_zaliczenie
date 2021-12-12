@@ -12,7 +12,8 @@ if(@$_POST["name"] != '' && @$_POST["founder"]  != '' && @$_POST["capital"]  != 
     $query = "INSERT INTO general_objects (name,founder,capital,HQLocation,DateOfDisabling) VALUES ('$name','$founder',$capital,'$HQLocation',$DateOfDisabling)";
     mysqli_query($db,$query);
     $db->close();
-    header('Location: ../index.php');
+    $getdata= "Objekt General [name=$name founder=$founder capital=$capital HQLocation=$HQLocation DateOfDisabling=$DateOfDisabling] został zapisany";
+    header("Location: ../index.php?text=$getdata");
 }
 ?>
 <!DOCTYPE html>
@@ -35,7 +36,7 @@ if(@$_POST["name"] != '' && @$_POST["founder"]  != '' && @$_POST["capital"]  != 
     <label for="HQLocation">HQLocation:</label><br>
     <input type="text" name="HQLocation"><br>
     <label for="DateOfDisabling">Date Of Disband:</label><br>
-    <input type="number" name="DateOfDisabling"><br>
+    <input type="text" name="DateOfDisabling"><br>
     <input type="submit" value="Submit">
     </form>
 </body>

@@ -12,7 +12,8 @@ if(@$_POST["name"] != '' && @$_POST["founder"]  != '' && @$_POST["capital"]  != 
     $query = "INSERT INTO partnership_objects (name,founder,capital,HQLocation,profession) VALUES ('$name','$founder',$capital,'$HQLocation','$profession')";
     mysqli_query($db,$query);
     $db->close();
-    header('Location: ../index.php');
+    $getdata= "Objekt Partnership [name=$name founder=$founder capital=$capital HQLocation=$HQLocation profession=$profession] został zapisany";
+    header("Location: ../index.php?text=$getdata");
 }
 ?>
 <!DOCTYPE html>

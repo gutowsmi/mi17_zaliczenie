@@ -22,7 +22,7 @@ class Jsc extends Capital{
     }
     public function __toString() {
         $worth = $this->GetWorth();
-        return "Type of Company: Capital\nName:$this->name S.A\nFounder: $this->founder\nCapital: $this->captial\nThis company is worth $worth";
+        return "Type of Company: Capital Name:$this->name S.A Founder: $this->founder Capital: $this->captial This company is worth $worth";
     }
     public function GetWorth(){
         return $this->stockprice*$this->stocks;

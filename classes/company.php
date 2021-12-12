@@ -30,7 +30,7 @@ class Company{
         return $this->capital;
     }
     public function __toString() {
-        return "Name:$this->name\nFounder: $this->founder\nCapital: $this->capital";
+        return "Name:$this->name Founder: $this->founder Capital: $this->capital";
     }
     public function AddCapital($capital){
         $holder = $this->capital + $capital;

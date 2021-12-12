@@ -6,12 +6,13 @@ if(@$_POST["name"] != '' && @$_POST["founder"]  != '' && @$_POST["capital"]  != 
     $founder = $_POST["founder"];
     $capital = $_POST["capital"];
     $branch = $_POST["branch"];
-    $object = new Corporation($name,$founder,$capital);
+    $object = new Corporation($name,$founder,$capital,$branch);
     $db = mysqli_connect("localhost","root","","zaliczenie");
     $query = "INSERT INTO corporation_objects (name,founder,capital,branch) VALUES ('$name','$founder',$capital,$branch)";
     mysqli_query($db,$query);
     $db->close();
-    header('Location: ../index.php');
+    $getdata= "Objekt Corporation [name=$name founder=$founder capital=$capital branch=$branch] został zapisany";
+    header("Location: ../index.php?text=$getdata");
 }
 ?>
 <!DOCTYPE html>

@@ -13,7 +13,7 @@ class Capital extends Company{
         return $this->StockExchange;
     }
     public function __toString() {
-        return "Type of Company: Capital\nName:$this->name\nFounder: $this->founder\nCapital: $this->captial\n";
+        return "Type of Company: Capital Name:$this->name Founder: $this->founder Capital: $this->capital ";
     }
     public function BuyStocks(){
         return "You can buy stocks of this company on $this->$StockExchange Stock exchange";

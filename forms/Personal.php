@@ -6,13 +6,13 @@ if(@$_POST["name"] != '' && @$_POST["founder"]  != '' && @$_POST["capital"]  != 
     $founder = $_POST["founder"];
     $capital = $_POST["capital"];
     $HQLocation = $_POST["HQLocation"];
-    $object = new Company($name,$founder,$capital,$HQLocation);
+    $object = new Personal($name,$founder,$capital,$HQLocation);
     $db = mysqli_connect("localhost","root","","zaliczenie");
     $query = "INSERT INTO personal_objects (name,founder,capital,HQLocation) VALUES ('$name','$founder',$capital,'$HQLocation')";
     mysqli_query($db,$query);
     $db->close();
-    #header('Location: ../index.php');
-    echo $query;
+    $getdata= "Objekt General [name=$name founder=$founder capital=$capital HQLocation=$HQLocation] został zapisany";
+    header("Location: ../index.php?text=$getdata");
 }
 ?>
 <!DOCTYPE html>

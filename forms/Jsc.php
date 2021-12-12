@@ -13,7 +13,8 @@ if(@$_POST["name"] != '' && @$_POST["founder"]  != '' && @$_POST["capital"]  != 
     $query = "INSERT INTO jsc_objects (name,founder,capital,StockExchange,stockprice,stocks) VALUES ('$name','$founder',$capital,'$StockExchange',$stockprice,$stocks)";
     mysqli_query($db,$query);
     $db->close();
-    header('Location: ../index.php');
+    $getdata= "Objekt Jsc [name=$name founder=$founder capital=$capital StockExchange=$StockExchange stockprice=$stockprice stocks=$stocks] został zapisany";
+    header("Location: ../index.php?text=$getdata");
 }
 ?>
 <!DOCTYPE html>

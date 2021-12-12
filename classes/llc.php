@@ -14,7 +14,7 @@ class Llc extends Capital{
     }
     public function __toString() {
         $worth = $this->GetWorth();
-        return "Type of Company: Capital\nName:$this->name S.A\nFounder: $this->founder\nCapital: $this->captial\n$this->HeadOfAdministration is head of Administration";
+        return "Type of Company: Capital Name:$this->name S.A Founder: $this->founder Capital: $this->captial $this->HeadOfAdministration is head of Administration";
     }
     public function PlanAdminMeeting($date){
         print("Meeting of administration will be held on $date");

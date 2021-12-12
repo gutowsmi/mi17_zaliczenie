@@ -13,7 +13,7 @@ class Partnership extends Personal{
         return $this->profession;
     }
     public function __toString() {
-        return "Name:$this->name\nFounder: $this->founder\nCapital: $this->captial\nHQ Location: $this->HQLocation\nThis company provides $this->profession services";
+        return "Name:$this->name Founder: $this->founder Capital: $this->captial HQ Location: $this->HQLocation This company provides $this->profession services";
     }
     public function LookForWork(){
         print("We are ardevtising our $this->profession services");

@@ -18,7 +18,7 @@ class General extends Personal{
         return "It is $diff days till disband of this company";
     }
     public function __toString() {
-        return "Name:$this->name\nFounder: $this->founder\nCapital: $this->captial\nHQ Location: $this->HQLocation\nDate of disband: $this->DateOfDisabling";
+        return "Name:$this->name Founder: $this->founder Capital: $this->captial HQ Location: $this->HQLocation Date of disband: $this->DateOfDisabling";
     }
 }
 ?>

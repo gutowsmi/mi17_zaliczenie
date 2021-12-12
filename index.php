@@ -78,7 +78,10 @@ function EchoForm($fieldid){
 </div>
 <?php
     $db->close();
-
+    @$alert = $_GET["text"];
+    if ($alert != ''){
+        echo " <script>alert('$alert')</script>";
+    }
 ?>
 </body>
 </html>

@@ -13,7 +13,7 @@ class Corporation extends Company{
         return $this->branch;
     }
     public function __toString() {
-        return "Name:$this->name\nFounder: $this->founder\nCapital: $this->captial\nThis company has: $this->branch branches";
+        return "Name:$this->name Founder: $this->founder Capital: $this->captial This company has: $this->branch branches";
     }
     public function ReadMe(){
         return "This corporation has $this->branch in multiple countries!";

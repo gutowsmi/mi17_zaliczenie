@@ -11,7 +11,8 @@ if(@$_POST["name"] != '' && @$_POST["founder"]  != '' && @$_POST["capital"]  != 
     $query = "INSERT INTO capital_objects (name,founder,capital,StockExchange) VALUES ('$name','$founder',$capital,'$StockExchange')";
     mysqli_query($db,$query);
     $db->close();
-    header('Location: ../index.php');
+    $getdata= "Objekt Capital [name=$name founder=$founder capital=$capital StockExchange=$StockExchange] został zapisany";
+    header("Location: ../index.php?text=$getdata");
 }
 ?>
 <!DOCTYPE html>

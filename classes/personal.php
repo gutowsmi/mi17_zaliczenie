@@ -13,7 +13,7 @@ class Personal extends Company{
         return $this->HQLocation;
     }
     public function __toString() {
-        return "Name:$this->name\nFounder: $this->founder\nCapital: $this->captial\nHQ Location: $this->HQLocation";
+        return "Name:$this->name Founder: $this->founder Capital: $this->captial HQ Location: $this->HQLocation";
     }
     public function AboutHQ(){
         return "Headquarters of this company are located in $this->HQLocation";

@@ -12,7 +12,8 @@ if(@$_POST["name"] != '' && @$_POST["founder"]  != '' && @$_POST["capital"]  != 
     $query = "INSERT INTO llc_objects (name,founder,capital,StockExchange,HeadOfAdministration) VALUES ('$name','$founder',$capital,'$StockExchange','$HeadOfAdministration')";
     mysqli_query($db,$query);
     $db->close();
-    header('Location: ../index.php');
+    $getdata= "Objekt Llc [name=$name founder=$founder capital=$capital StockExchange=$StockExchange HeadOfAdministration=$HeadOfAdministration] został zapisany";
+    header("Location: ../index.php?text=$getdata");
 }
 ?>
 <!DOCTYPE html>
