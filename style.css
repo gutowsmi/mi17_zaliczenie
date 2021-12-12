@@ -36,6 +36,10 @@ body{
 }
 #diagram-3{
     margin-right: 12vw;
+    display: flex;
+}
+#diagram-4{
+    display: flex;
 }
 div{
     margin-bottom: 10px;

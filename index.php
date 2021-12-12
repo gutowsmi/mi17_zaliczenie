@@ -3,6 +3,14 @@ foreach (glob("classes/*.php") as $filename)
 {
     require_once $filename;
 }
+function EchoForm($fieldid){
+    return "<div>
+    <form action='upload.php' method='post' enctype='multipart/form-data'>
+    <input type='file' name='fileToUpload' id='fileToUpload'><br>
+    <input type='hidden' name='field_id' value=$fieldid>
+    <input type='submit' value='Zapisz' name='submit'>
+    </form></div>";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +43,8 @@ foreach (glob("classes/*.php") as $filename)
     while($row = mysqli_fetch_array($result)){
         echo "<tr><td>$row[0]</td><td>$row[1]</td><td>$row[2]</td><td>$row[3]</td><td>$row[4]</td><td>$row[5]</td></tr>";
         $form = '"'."./forms/$row[1].php".'"';
-        array_push($data,"<img src='img/placeholder.jpg' title='$row[3]' id='$counter' onclick='document.location = $form'>");
+        $uploadform = EchoForm($row[0]);
+        array_push($data,"<div><img src='$row[2]' title='$row[3]' id='$counter' onclick='document.location = $form'>$uploadform</div>");
         $counter++;
     }
     ?>
