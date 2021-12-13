@@ -23,24 +23,23 @@ body{
     align-self: center;
     text-align: center;
 }
-#diagram-1{
-    width: 85vw;
+.row{
     display: flex;
-    justify-content: space-evenly;
-}
-#diagram-2{
+    justify-content: center;
 
-    display: flex;
-    justify-content: space-around;
-
-}
-#diagram-3{
-    margin-right: 12vw;
-    display: flex;
-}
-#diagram-4{
-    display: flex;
 }
 div{
     margin-bottom: 10px;
+}
+.col{
+    padding-left: 1vw;
+    padding-right: 1vw;
+    font-size: 0.5vw;
+}
+img{
+    width: 5vw;
+    height: 5vw;
+}
+body{
+    margin: 0px;
 }
